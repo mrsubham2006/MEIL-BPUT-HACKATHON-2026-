@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-forest: #12372A;
+    --color-corp-green: #1F6F50;
+    --color-emerald: #2E7D5B;
+    --color-gold: #C5A35A;
+    --color-warm-bg: #F7F7F3;
+    --color-white: #FFFFFF;
+    --color-text-primary: #202522;
+    --color-text-secondary: #68716C;
+    --color-border: #DDE3DE;
+    --color-surface-light: #EDF4EF;
+    --color-success: #2E7D5B;
+    --color-warning: #B8872F;
+    --color-error: #B94A48;
+  }
+
+  body {
+    background-color: var(--color-warm-bg);
+    color: var(--color-text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Headings 28-36px font weight 600-700 */
+  h1 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--color-forest);
+  }
+
+  /* Section headings 20-24px font weight 600 */
+  h2, h3 {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--color-text-primary);
+  }
+
+  /* Tabular numbers for all statistics and financial/audit dashboards */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom Scrollbar for dense enterprise reporting tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F4F1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4CFC7;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9DAF9F;
+}
+
+/* Button & Component Standard Tokens */
+.btn-primary {
+  background-color: #12372A;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  transition: all 0.15s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #1F6F50;
+}
+
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: #12372A;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  border: 1px solid #DDE3DE;
+  transition: all 0.15s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #EDF4EF;
+  border-color: #1F6F50;
+}
+
+.btn-danger {
+  background-color: #FFFFFF;
+  color: #B94A48;
+  border: 1px solid #F5C6CB;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background-color: #FDF2F2;
+}
+
+/* Corporate Card System: White background, 1px #DDE3DE border, 8-12px radius, subtle shadow, 24px padding */
+.corp-card {
+  background-color: #FFFFFF;
+  border: 1px solid #DDE3DE;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(18, 55, 42, 0.04);
+}
+
+.corp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background-color: #FFFFFF;
+}
+
+.corp-table th {
+  background-color: #F7F7F3;
+  color: #68716C;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 10px 14px;
+  border-bottom: 1px solid #DDE3DE;
+  text-align: left;
+}
+
+.corp-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #EEF2EE;
+  color: #202522;
+}
+
+.corp-table tr:hover {
+  background-color: #FBFDFB;
+}
+
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #202522 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

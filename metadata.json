@@ -1,0 +1,6 @@
+{
+  "name": "MEIL ESG360",
+  "description": "Enterprise ESG & BRSR Reporting Platform for Megha Engineering & Infrastructures Limited. One Group. One ESG Truth. Complete Reporting Traceability.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
